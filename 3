@@ -1,0 +1,33 @@
+package AG;
+import java.util.Scanner;
+public class Q3 {
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Weather: ");
+        String weather=sc.next();
+        System.out.println("Is it a peakday: ");
+        boolean isday=sc.nextBoolean();
+        System.out.println("Enter False(Weekday),True(Weekend): ");
+        boolean isweek=sc.nextBoolean();
+        System.out.println("Enter the distance: ");
+        double dis = sc.nextDouble();
+        double fare=0;
+        if(weather.equalsIgnoreCase("Clear")){
+            fare =3+(1.5*dis);
+        }else if(weather.equalsIgnoreCase("Rainy")){
+            fare = 3+(2*dis);
+        }else if(weather.equalsIgnoreCase("Snowy")){
+            fare = 3+(2.5*dis);
+        }if(isday&&isweek){
+            fare = fare *1.2;
+        }else if(isday){
+            fare = fare*1.4;
+        }else{
+            fare=fare*1;
+        }
+        if(dis>20){
+            fare = fare-5;
+        }
+        System.out.println(fare);
+    }
+}
