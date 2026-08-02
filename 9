@@ -1,0 +1,20 @@
+package AG;
+import java.util.Scanner;
+public class Q9 {
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of N: ");
+        int n=sc.nextInt();
+        int even=0;
+        int odd=0;
+        for(int i =0;i<=n;i++){
+            if(i%2==0){
+                even+=i;
+            }else{
+                odd+=i;
+            }
+        }
+        int s = Math.abs(odd-even);
+        System.out.println(s);
+    }
+}
