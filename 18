@@ -1,0 +1,21 @@
+package AG;
+import java.util.Scanner;
+public class Q18_arms {
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int ori=n;
+        int tem=0;
+        int len = (int)Math.log10(n)+1;
+        while(n!=0){
+            int digit=n%10;
+            tem+=(int)Math.pow(digit,len);
+            n/=10;
+        }
+        if(tem==ori){
+            System.out.println("Armstrong ");
+        }else {
+            System.out.println("Not a Armstrong number");
+        }
+        }
+    }
