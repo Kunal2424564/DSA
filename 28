@@ -1,0 +1,14 @@
+package AG;
+import java.util.Scanner;
+public class Q28 {
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        if(a==0){
+            System.out.println("1");
+        }else {
+            int len = (int) Math.log10(Math.abs(a)) + 1;
+            System.out.println(len);
+        }
+    }
+}
